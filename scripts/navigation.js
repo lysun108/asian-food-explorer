@@ -1,0 +1,1 @@
+import{qs}from"./utils.js";export function setupNavigation(){const b=qs(".nav__toggle"),m=qs("#primary-menu");if(!b||!m)return;b.addEventListener("click",()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",String(o))})}

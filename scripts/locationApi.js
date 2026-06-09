@@ -1,0 +1,1 @@
+export async function searchLocation(query){const url=`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=5&addressdetails=1`;const r=await fetch(url,{headers:{Accept:"application/json"}});if(!r.ok)throw new Error("Location request failed");return r.json()}
