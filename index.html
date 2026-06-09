@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Asian Food Explorer helps users search dishes, explore categories, save favorites, and find locations.">
+  <title>Asian Food Explorer | Home</title>
+  <link rel="stylesheet" href="styles/base.css"><link rel="stylesheet" href="styles/layout.css"><link rel="stylesheet" href="styles/components.css"><link rel="stylesheet" href="styles/animations.css">
+  <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><nav class="nav container" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand__icon">🍜</span><span class="brand__text">Asian Food Explorer</span></a><button class="nav__toggle" type="button" aria-controls="primary-menu" aria-expanded="false">☰</button><ul class="nav__list" id="primary-menu"><li><a class="active" href="index.html">Home</a></li><li><a href="favorites.html">Favorites</a></li><li><a href="location.html">Location</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
+<main id="main-content">
+<section class="hero"><div class="container hero__content"><p class="eyebrow">Simple Food Discovery</p><h1>Discover Asian Food</h1><p class="hero__text">Search dishes, explore categories, receive random food suggestions, and save your favorites.</p><form class="search-form" id="meal-search-form"><label class="sr-only" for="meal-search">Search for a dish</label><input id="meal-search" type="search" placeholder="Search for sushi, curry, chicken..." required><button class="button" type="submit">Search</button></form><div class="hero__actions"><button class="button button--secondary" id="random-meal-button" type="button">🎲 Random Dish</button><a class="button button--ghost" href="location.html">Find Location</a></div></div></section>
+<section class="container section"><div class="section__header"><p class="eyebrow">Browse</p><h2>Categories</h2><p>Choose a category to explore dishes from TheMealDB API.</p></div><div class="category-list" id="category-list"></div></section>
+<section class="container section"><div class="section__header"><p class="eyebrow">Results</p><h2>Dish Results</h2><p id="result-status">Search for a dish, choose a category, or try a random dish.</p></div><div id="loading" class="loading hidden"><span class="spinner"></span>Loading food data...</div><div id="message" class="message hidden"></div><div class="card-grid" id="meal-results"></div></section>
+<dialog id="meal-dialog" class="meal-dialog"><div id="meal-detail"></div><button class="button button--ghost dialog-close" id="dialog-close" type="button">Close</button></dialog>
+</main><footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Asian Food Explorer.</p></div></footer>
+</body></html>
